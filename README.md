@@ -119,11 +119,15 @@ After running QSIPrep → QSIRecon, scalar outputs are scattered across a deeply
 
 ### From PyPI (once published)
 
+```bash
+pip install qsi-extract
+```
+
 ### From source
 
 ```bash
-git clone https://github.com/TravisBeckwith/qsi-extract.git
-cd qsi-extract
+git clone https://github.com/TravisBeckwith/QSI-extract.git
+cd QSI-extract
 pip install -e ".[dev]"
 ```
 
@@ -338,6 +342,7 @@ The NODDI model assumes a fixed intrinsic parallel diffusivity `d_par` = 1.7 µm
 `qsi-extract` extracts `d_par` from the `*_model-noddi_param-icvf_dwimap.json` sidecar written by QSIRecon's AMICO interface and applies the following audit logic:
 
 ```
+# Default threshold: --noddi-infant-threshold-months 18
 d_par == 1.7  AND  session_age_months <= noddi_infant_threshold_months
     → noddi_d_par_flag = "WARN:adult_default_d_par_in_infant"
 
@@ -523,8 +528,8 @@ The design follows a strict **read → parse → collate → flag → write** pi
 ## Development
 
 ```bash
-git clone https://github.com/TravisBeckwith/qsi-extract.git
-cd qsi-extract
+git clone https://github.com/TravisBeckwith/QSI-extract.git
+cd QSI-extract
 pip install -e ".[dev]"
 
 # Run tests
