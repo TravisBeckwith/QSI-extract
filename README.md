@@ -523,7 +523,7 @@ The design follows a strict **read → parse → collate → flag → write** pi
 ## Development
 
 ```bash
-git clone https://github.com/<your-org>/qsi-extract.git
+git clone https://github.com/TravisBeckwith/qsi-extract.git
 cd qsi-extract
 pip install -e ".[dev]"
 
