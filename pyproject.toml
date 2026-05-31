@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qsi-extract"
+version = "0.1.0.dev0"
+description = "Extract and collate diffusion MRI scalar outputs from QSIPrep and QSIRecon into tidy longitudinal tables"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Travis Beckwith" },
+]
+keywords = [
+    "diffusion MRI",
+    "BIDS",
+    "QSIPrep",
+    "QSIRecon",
+    "NODDI",
+    "DTI",
+    "neuroimaging",
+    "tractography",
+    "longitudinal",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=1.5",
+]
+
+[project.optional-dependencies]
+parquet = ["pyarrow>=10.0"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pyarrow>=10.0",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+qsi-extract = "qsi_extract.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/TravisBeckwith/QSI-extract"
+Repository = "https://github.com/TravisBeckwith/QSI-extract"
+"Bug Tracker" = "https://github.com/TravisBeckwith/QSI-extract/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["qsi_extract*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 99
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
