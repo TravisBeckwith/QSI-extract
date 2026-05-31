@@ -119,10 +119,6 @@ After running QSIPrep → QSIRecon, scalar outputs are scattered across a deeply
 
 ### From PyPI (once published)
 
-```bash
-pip install qsi-extract
-```
-
 ### From source
 
 ```bash
