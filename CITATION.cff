@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "qsi-extract: Extract and collate diffusion MRI scalar outputs from QSIPrep and QSIRecon into tidy longitudinal tables"
+abstract: >-
+  A standalone Python tool that traverses BIDS derivative trees produced by
+  QSIPrep and QSIRecon, parses per-bundle and per-ROI diffusion scalar outputs
+  (NODDI, DTI, tractometry), audits NODDI model-fitting assumptions, propagates
+  QC flags, and writes clean longitudinal tables ready for statistical analysis.
+type: software
+authors:
+  - family-names: Beckwith
+    given-names: Travis
+    orcid: "https://orcid.org/0000-0001-6128-8464"
+version: "0.1.0"
+date-released: "2026-07-06"
+license: MIT
+repository-code: "https://github.com/TravisBeckwith/QSI-extract"
+url: "https://github.com/TravisBeckwith/QSI-extract"
+doi: "10.5281/zenodo.21224834"
+keywords:
+  - neuroimaging
+  - diffusion MRI
+  - BIDS
+  - QSIPrep
+  - QSIRecon
+  - NODDI
+  - DTI
+  - tractography
+  - longitudinal
