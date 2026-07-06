@@ -70,7 +70,7 @@ target-version = "py39"
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "B", "C4"]
-ignore = ["E501"]
+ignore = ["E501", "UP006", "UP035", "UP045"]  # keep typing compatible with Python 3.9 target
 
 [tool.ruff.format]
 quote-style = "double"
