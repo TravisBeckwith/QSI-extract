@@ -180,7 +180,7 @@ class ExtractorConfig:
                 raise ImportError(
                     "write_parquet=True requires pyarrow. "
                     "Install it with: pip install 'qsi-extract[parquet]'"
-                )
+                ) from None
 
     # -----------------------------------------------------------------------
     # Serialisation
