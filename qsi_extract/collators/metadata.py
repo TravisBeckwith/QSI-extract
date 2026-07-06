@@ -53,7 +53,7 @@ class MetadataCollator:
 
         # QSIRecon: pick the first suffix's version (they should all match)
         qsirecon_version = "unknown"
-        for suffix, desc in self.layout.qsirecon_dataset_descs.items():
+        for _suffix, desc in self.layout.qsirecon_dataset_descs.items():
             v = self._extract_version(desc)
             if v != "unknown":
                 qsirecon_version = v
