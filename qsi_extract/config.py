@@ -15,10 +15,9 @@ CLI arguments always take precedence over values loaded from a JSON file.
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field, asdict
+from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import List, Literal, Optional
-
 
 # ---------------------------------------------------------------------------
 # Type aliases
@@ -204,14 +203,14 @@ class ExtractorConfig:
             json.dump(self.to_dict(), fh, indent=2)
 
     @classmethod
-    def from_json(cls, path: Path) -> "ExtractorConfig":
+    def from_json(cls, path: Path) -> ExtractorConfig:
         """Load config from a JSON file."""
         with open(path, encoding="utf-8") as fh:
             data = json.load(fh)
         return cls(**data)
 
     @classmethod
-    def from_args(cls, args) -> "ExtractorConfig":
+    def from_args(cls, args) -> ExtractorConfig:
         """Build config from an ``argparse.Namespace``, skipping ``None`` values
         so that unset CLI arguments fall back to dataclass defaults."""
         kwargs = {k: v for k, v in vars(args).items() if v is not None}

@@ -31,7 +31,7 @@ from typing import TYPE_CHECKING
 import pandas as pd
 
 if TYPE_CHECKING:
-    from qsi_extract.utils.logging import RunLogger
+    pass
 
 logger = logging.getLogger(__name__)
 

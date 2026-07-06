@@ -34,7 +34,7 @@ class MetadataCollator:
         A fully discovered ``BIDSLayout`` instance.
     """
 
-    def __init__(self, layout: "BIDSLayout") -> None:
+    def __init__(self, layout: BIDSLayout) -> None:
         self.layout = layout
 
     def apply(self, df: pd.DataFrame) -> pd.DataFrame:

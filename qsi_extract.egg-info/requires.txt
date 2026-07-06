@@ -1,0 +1,10 @@
+pandas>=1.5
+
+[dev]
+pytest>=7.0
+pytest-cov>=4.0
+pyarrow>=10.0
+ruff>=0.4
+
+[parquet]
+pyarrow>=10.0

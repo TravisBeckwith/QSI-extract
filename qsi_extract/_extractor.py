@@ -13,23 +13,21 @@ used independently for custom pipelines.
 from __future__ import annotations
 
 import logging
-from pathlib import Path
-from typing import TYPE_CHECKING
 
 import pandas as pd
 
-from qsi_extract.config import ExtractorConfig
-from qsi_extract.layout.bids_layout import BIDSLayout
-from qsi_extract.parsers.bundle_means import BundleMeansParser
-from qsi_extract.parsers.tractometry import TractometryParser
-from qsi_extract.parsers.dwimap_json import DwimapJsonParser
-from qsi_extract.parsers.qc import QCParser
 from qsi_extract.collators.longitudinal import LongitudinalCollator
 from qsi_extract.collators.metadata import MetadataCollator
+from qsi_extract.config import ExtractorConfig
 from qsi_extract.flags.noddi_assumptions import NODDIAssumptionFlagger
-from qsi_extract.output.writers import OutputWriter
+from qsi_extract.layout.bids_layout import BIDSLayout
 from qsi_extract.output.data_dictionary import DataDictionaryBuilder
-from qsi_extract.utils.logging import setup_logging, RunLogger
+from qsi_extract.output.writers import OutputWriter
+from qsi_extract.parsers.bundle_means import BundleMeansParser
+from qsi_extract.parsers.dwimap_json import DwimapJsonParser
+from qsi_extract.parsers.qc import QCParser
+from qsi_extract.parsers.tractometry import TractometryParser
+from qsi_extract.utils.logging import RunLogger, setup_logging
 
 logger = logging.getLogger(__name__)
 
