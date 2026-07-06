@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 ![Status: Alpha](https://img.shields.io/badge/status-alpha-orange)
-[![DOI](https://zenodo.org/badge/1255367585.svg)](https://doi.org/10.5281/zenodo.21224834)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21224834-blue)](https://doi.org/10.5281/zenodo.21224834)
 
 **A standalone Python tool for extracting and collating diffusion MRI scalar outputs from QSIPrep and QSIRecon into tidy, longitudinal tabular datasets.**
 
