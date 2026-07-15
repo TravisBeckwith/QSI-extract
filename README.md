@@ -1,10 +1,8 @@
 # qsi-extract
 
+[![DOI](https://zenodo.org/badge/1255367585.svg)](https://doi.org/10.5281/zenodo.21224834)
 [![Tests](https://github.com/TravisBeckwith/QSI-extract/actions/workflows/tests.yml/badge.svg)](https://github.com/TravisBeckwith/QSI-extract/actions/workflows/tests.yml)
-![Python](https://img.shields.io/badge/python-3.9%2B-blue)
-![License: MIT](https://img.shields.io/badge/License-MIT-green)
-![Status: Alpha](https://img.shields.io/badge/status-alpha-orange)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21224834-blue)](https://doi.org/10.5281/zenodo.21224834)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
 **A standalone Python tool for extracting and collating diffusion MRI scalar outputs from QSIPrep and QSIRecon into tidy, longitudinal tabular datasets.**
 
@@ -583,13 +581,7 @@ qsi-extract \
 
 ## Citation
 
-If you use `qsi-extract` in your research, please cite the software:
-
-> Beckwith, T. (2026). *qsi-extract: Extract and collate diffusion MRI scalar outputs from QSIPrep and QSIRecon into tidy longitudinal tables* (v0.1.0). Zenodo. https://doi.org/10.5281/zenodo.21224834
-
-A `CITATION.cff` file is included in the repository, so GitHub's "Cite this repository" button will generate APA and BibTeX entries automatically.
-
-Please also cite the upstream pipelines your data passed through:
+If you use `qsi-extract` in your research, please cite the QSIPrep/QSIRecon paper:
 
 > Cieslak, M., Cook, P. A., He, X., Yeh, F. C., Dhollander, T., Adebimpe, A., … & Satterthwaite, T. D. (2021). QSIPrep: an integrative platform for preprocessing and reconstructing diffusion MRI data. *Nature Methods*, 18(7), 775–778. https://doi.org/10.1038/s41592-021-01185-5
 
