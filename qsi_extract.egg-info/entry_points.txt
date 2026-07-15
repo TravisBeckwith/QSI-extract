@@ -1,2 +1,0 @@
-[console_scripts]
-qsi-extract = qsi_extract.cli:main
